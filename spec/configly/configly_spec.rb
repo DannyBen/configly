@@ -84,6 +84,13 @@ describe Configly do
         it "returns true" do
           expect(subject.nested.works?).to be true
         end
+
+        context "when its value is numeric" do
+          it "still returns true" do
+            subject.port = 3000
+            expect(subject.port?).to be true
+          end
+        end
       end
 
       context "when the key does not exist" do
@@ -91,18 +98,40 @@ describe Configly do
           expect(subject.nested.doesnt_work?).to be false
         end
       end
-    end
 
-    describe '! suffix' do
-      context "when the value exists" do
-        it "returns it" do
-          expect(subject.nested.works!).to eq 'sure'
+      context "when the key is empty" do
+        it "returns false" do
+          subject.this_will.create_me
+          expect(subject.this_will.create_me?).to be false
         end
       end
 
-      context "when the value does not exist" do
+    end
+
+    describe '! suffix' do
+      context "when the key exists" do
+        it "returns its value" do
+          expect(subject.nested.works!).to eq 'sure'
+        end
+
+        context "when its value is numeric" do
+          it "still returns its value" do
+            subject.port = 3000
+            expect(subject.port!).to eq 3000
+          end
+        end
+      end
+
+      context "when the key does not exist" do
         it "returns nil" do
           expect(subject.nested.doesnt_work!).to be nil
+        end
+      end
+
+      context "when the key is empty" do
+        it "returns nil" do
+          subject.this_will.create_me
+          expect(subject.this_will.create_me!).to be nil
         end
       end
     end

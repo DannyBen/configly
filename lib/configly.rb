@@ -40,10 +40,11 @@ class Configly < Hash
       self[key] = val
 
     when "?"
-      !!self[key]
+      has_key?(key) and !(self[key].is_a?(Configly) and self[key].empty?)
 
     when "!"
-      self[key]
+      (has_key?(key) and !(self[key].is_a?(Configly) and self[key].empty?)) ? 
+        self[key] : nil
 
     else
       self[key] = self.class.new
@@ -68,4 +69,3 @@ protected
   end
 
 end
-
