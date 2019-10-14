@@ -5,5 +5,6 @@ gem 'rspec'
 gem 'runfile'
 gem 'runfile-tasks'
 gem 'simplecov'
+gem 'docspec'
 
 gemspec
