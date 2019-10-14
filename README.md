@@ -2,6 +2,8 @@ Configly - Minimal Settings Library
 ==================================================
 
 [![Gem Version](https://badge.fury.io/rb/configly.svg)](https://badge.fury.io/rb/configly)
+[![Build Status](https://travis-ci.com/DannyBen/configly.svg?branch=master)](https://travis-ci.com/DannyBen/configly)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a8c4977315f307979f30/maintainability)](https://codeclimate.com/github/DannyBen/configly/maintainability)
 
 Configly is a lightweight ruby Hash object with dot notation access.
 
