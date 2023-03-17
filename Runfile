@@ -1,10 +1,8 @@
-require "runfile-tasks"
 require "byebug"
-require_relative 'lib/configly'
+require 'configly/version'
 
 title   "Configly Developer Toolbelt"
 summary "Runfile tasks for building the Configly gem"
 version Configly::VERSION
 
-RunfileTasks::RubyGems.all 'configly'
-RunfileTasks::Testing.rspec
+import_gem 'runfile-tasks/gem'
