@@ -1,6 +1,8 @@
 Configly - Minimal Settings Library
 ==================================================
 
+![repocard](https://repocard.dannyben.com/svg/configly.svg)
+
 Configly is a lightweight ruby Hash object with dot notation access.
 
 It is designed for loading and using YAML configuration files.
