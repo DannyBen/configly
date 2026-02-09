@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/dannyben/configly'
   s.license     = 'MIT'
 
-  s.required_ruby_version = '>= 3.0'
+  s.required_ruby_version = '>= 3.2'
   s.metadata['rubygems_mfa_required'] = 'true'
 end
